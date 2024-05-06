@@ -6,47 +6,52 @@
     <title>Philosophy Student's Website</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #0d0d0d;
             color: #fff;
         }
-        header, section {
+        header {
             background-color: #1a1a1a;
             padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        h1, h2 {
+        nav ul {
+            list-style-type: none;
             margin: 0;
-            font-size: 2em;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #00ffff;
+            text-decoration: none;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        footer {
+        section {
+            padding: 40px;
+            margin-bottom: 20px;
             background-color: #1a1a1a;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        section:target {
+            display: block;
+        }
+        h2 {
+            margin-top: 0;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         blockquote {
             font-style: italic;
-            border-left: 4px solid #00ff00;
+            border-left: 4px solid #00ffff;
             padding-left: 20px;
             margin: 20px 0;
-        }
-        a {
-            color: #00ff00;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         ul {
             list-style-type: none;
@@ -55,39 +60,59 @@
         li {
             margin-bottom: 10px;
         }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <header>
-    <h1>Philosophy Student's Website</h1>
-</header>
-<main>
-    <section>
-        <h2>About Me</h2>
-        <p>Hi, I'm a philosophy student passionate about exploring the fundamental questions of existence, knowledge, values, reason, and the nature of reality in the context of our rapidly evolving world.</p>
-    </section>
-
-    <section>
-        <h2>Favorite Quote</h2>
-        <blockquote>
-            "The unexamined life is not worth living." - Socrates
-        </blockquote>
-    </section>
-
-    <section>
-        <h2>Blog Posts</h2>
+    <nav>
         <ul>
-            <li><a href="#">The Importance of Critical Thinking in the Age of AI</a></li>
-            <li><a href="#">Exploring the Concept of Free Will in a Deterministic Universe</a></li>
-            <li><a href="#">The Ethics of Artificial Intelligence and Its Impact on Society</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#quote">Quote</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
+</header>
 
-    <section>
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me via email at <a href="mailto:philosophystudent@example.com">philosophystudent@example.com</a>.</p>
-    </section>
-</main>
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm a philosophy student passionate about exploring the fundamental questions of existence, knowledge, values, reason, and the nature of reality.</p>
+</section>
+
+<section id="quote">
+    <h2>Favorite Quote</h2>
+    <blockquote>
+        "The unexamined life is not worth living." - Socrates
+    </blockquote>
+</section>
+
+<section id="blog">
+    <h2>Blog Posts</h2>
+    <ul>
+        <li><a href="#">The Importance of Critical Thinking</a></li>
+        <li><a href="#">Exploring the Concept of Free Will</a></li>
+        <li><a href="#">The Ethics of Artificial Intelligence</a></li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me via email at <a href="mailto:philosophystudent@example.com">philosophystudent@example.com</a>.</p>
+</section>
+
 <footer>
     &copy; 2023 Philosophy Student's Website
 </footer>

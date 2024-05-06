@@ -5,27 +5,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --nav-height: 60px; /* Adjust this value based on your navigation menu height */
+}
+
 /* Global styles */
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
-    background-color: #fbf4df;
-    color: #5c4d3d;
+    background-color: #FF964F;
+    color: #fff1c1;
 }
 
 .hero-content h1,
 .hero-content h2,
 .hero-content p {
-    color: #5c4d3d;
+    color: #fff1c1;
 }
 
 .hero-content h1 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(250, 150, 3, 0.52);
 }
 
 /* Navigation styles */
 nav {
-    background-color: #fbf4df;
+    background-color: #FF964F;
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -33,6 +37,7 @@ nav {
     right: 0;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: var(--nav-height);
 }
 
 nav ul {
@@ -46,14 +51,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #5c4d3d;
+    color: #fff1c1;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #d2b48c;
+    color: #8daef4;
 }
 
 /* Section styles */
@@ -75,10 +80,19 @@ nav ul li a:hover {
 }
 
 .hero-content {
+    text-align: justify;
+    max-width: 800px;
+    padding: 1rem;
+    /*margin-top: calc(var(--nav-height) + 200px); !* Adjust the extra space (20px) as needed *!*/
+    margin-top: var(--nav-height);
+}
+
+.hero-main-content {
     text-align: center;
     max-width: 800px;
     padding: 2rem;
 }
+
 
 .section h1 {
     font-size: 3rem;
@@ -129,4 +143,14 @@ footer {
     width: 100%;
     height: 400px;
     border: none;
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+}
+
+.tab {
+    position: relative;
+    z-index: 1;
 }

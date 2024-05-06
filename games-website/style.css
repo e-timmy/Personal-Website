@@ -1,0 +1,90 @@
+body {
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    text-align: center;
+    background-color: #8FBC8F;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.menu a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.color-explosion {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: explode 0.5s forwards;
+}
+
+@keyframes explode {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 200vw;
+        height: 200vw;
+    }
+}
+
+.section-content {
+    opacity: 0;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#dancing-character {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+}
+
+@keyframes dance {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+#dancing-character {
+    animation: dance 1s infinite;
+}
