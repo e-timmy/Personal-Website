@@ -11,7 +11,7 @@
 
 /* Global styles */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #FF964F;
     color: #fff1c1;
@@ -37,7 +37,6 @@ nav {
     right: 0;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: var(--nav-height);
 }
 
 nav ul {
@@ -54,7 +53,7 @@ nav ul li a {
     color: #fff1c1;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 nav ul li a:hover {
@@ -63,7 +62,7 @@ nav ul li a:hover {
 
 /* Section styles */
 .section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,6 +72,8 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     right: 0;
+    padding-top: 80px; /* Adjust this value based on the height of your navigation menu */
+    padding-bottom: 2rem; /* Add padding to create space for the footer */
 }
 
 .section.active {
@@ -84,7 +85,6 @@ nav ul li a:hover {
     max-width: 800px;
     padding: 1rem;
     /*margin-top: calc(var(--nav-height) + 200px); !* Adjust the extra space (20px) as needed *!*/
-    margin-top: var(--nav-height);
 }
 
 .hero-main-content {
@@ -117,8 +117,7 @@ nav ul li a:hover {
 footer {
     padding: 2rem;
     text-align: center;
-    position: relative;
-    margin-top: 100vh;
+    background-color: #FF964F;
 }
 
 .writing-item {
