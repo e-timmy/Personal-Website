@@ -1,6 +1,11 @@
 const menu = document.getElementById('menu');
+const menuIcon = document.querySelector('.menu-icon');
 const menuLinks = document.querySelectorAll('#menu ul li a');
 const sections = document.querySelectorAll('section');
+
+menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
 
 menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -11,19 +16,16 @@ menuLinks.forEach(link => {
             section.classList.remove('active');
         });
 
-        target.classList.add('active');
+        setTimeout(() => {
+            target.classList.add('active');
+        }, 800);
+
         menu.classList.remove('active');
     });
 });
 
 document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target)) {
+    if (!menu.contains(e.target) && !menuIcon.contains(e.target)) {
         menu.classList.remove('active');
-    }
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (e.clientX <= 20) {
-        menu.classList.add('active');
     }
 });
