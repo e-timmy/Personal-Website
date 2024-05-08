@@ -7,20 +7,23 @@
 
 :root {
     --nav-height: 60px; /* Adjust this value based on your navigation menu height */
+    --primary-color: #FF964F;
+    --secondary-color: #8daef4;
+    --text-color: #fff1c1;
 }
 
 /* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Jersey 10', sans-serif;
     line-height: 1.6;
-    background-color: #FF964F;
-    color: #fff1c1;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .hero-content h1,
 .hero-content h2,
 .hero-content p {
-    color: #fff1c1;
+    color: var(--text-color);
 }
 
 .hero-content h1 {
@@ -29,7 +32,7 @@ body {
 
 /* Navigation styles */
 nav {
-    background-color: #FF964F;
+    background-color: var(--primary-color);
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -50,14 +53,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff1c1;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.5s ease;
 }
 
 nav ul li a:hover {
-    color: #8daef4;
+    color: var(--secondary-color);
 }
 
 /* Section styles */
@@ -87,37 +90,79 @@ nav ul li a:hover {
     /*margin-top: calc(var(--nav-height) + 200px); !* Adjust the extra space (20px) as needed *!*/
 }
 
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 2rem;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    text-align: justify;
+}
+
 .hero-main-content {
     text-align: center;
     max-width: 800px;
     padding: 2rem;
 }
 
-
 .section h1 {
+    justify-content: center;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--text-color);
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .section h3 {
+    text-decoration: underline;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.section h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .section p {
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Footer styles */
 footer {
     padding: 2rem;
     text-align: center;
-    background-color: #FF964F;
+    background-color: var(--primary-color);
 }
 
 .writing-item {
