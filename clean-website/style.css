@@ -18,6 +18,7 @@ body {
     line-height: 1.6;
     background-color: var(--primary-color);
     color: var(--text-color);
+    height: auto; /* Change from a fixed height to auto */
 }
 
 .hero-content h1,
@@ -83,6 +84,14 @@ nav ul li a:hover {
 
 .section.active {
     opacity: 1;
+}
+
+
+.section-container {
+    position: relative;
+    padding-top: var(--nav-height);
+    padding-bottom: 2rem;
+    transition: height 0.8s ease;
 }
 
 .hero-content {
@@ -196,18 +205,23 @@ footer {
     z-index: 1;
 }
 
-#snake {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 998;
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Jersey 10', sans-serif;
+    padding: 0;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
 }
 
-.snake-body {
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
+.tab-button:hover {
+    color: var(--secondary-color);
 }
+
+
+

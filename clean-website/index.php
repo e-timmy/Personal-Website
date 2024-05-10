@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timothy Holland</title>
+    <title>Name</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,7 @@
                     <li><a href="#" class="tab" data-section="writing">Writing</a></li>
                     <li><a href="#" class="tab" data-section="projects">Projects</a></li>
                     <li><a href="#" class="tab" data-section="contact">Contact</a></li>
+                    <!--<button id="snakeToggle" class="tab-button">Snake</button> <!-- Toggle to incorporate snake -->
                 </ul>
             </nav>
         </header>
@@ -31,18 +32,9 @@
             <?php include 'sections/writing.php'; ?>
             <?php include 'sections/projects.php'; ?>
             <?php include 'sections/contact.php'; ?>
-<!--        <footer>-->
-<!--            <p>&copy; 2024 Timothy Holland. All rights reserved.</p>-->
-<!--        </footer>-->
         </main>
-        <div id="snake">
-            <div class="snake-body"></div>
-            <div class="snake-body"></div>
-            <div class="snake-body"></div>
-            <div class="snake-body"></div>
-            <div class="snake-body"></div>
-        </div>
-        <script src="script.js"></script>
+        <?php include 'snake.php'; ?>
+    <script src="script.js"></script>
     </div>
 </body>
 </html>
