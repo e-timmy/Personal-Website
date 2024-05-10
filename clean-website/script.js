@@ -76,3 +76,54 @@ navLinks.forEach(link => {
         });
     });
 });
+
+// SNAKE
+document.addEventListener('DOMContentLoaded', function() {
+    var snake = document.getElementById('snake');
+    var snakeBodies = document.querySelectorAll('.snake-body');
+    var snakeLength = snakeBodies.length;
+    var borderWidth = 20; // Adjust this value to match the snake's width/height
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+    var currentDirection = 'right';
+    var currentPosition = { x: 0, y: 0 };
+
+    function moveSnake() {
+        var newPosition = { x: currentPosition.x, y: currentPosition.y };
+
+        if (currentDirection === 'right') {
+            newPosition.x += borderWidth;
+            if (newPosition.x >= screenWidth - borderWidth) {
+                currentDirection = 'down';
+            }
+        } else if (currentDirection === 'down') {
+            newPosition.y += borderWidth;
+            if (newPosition.y >= screenHeight - borderWidth) {
+                currentDirection = 'left';
+            }
+        } else if (currentDirection === 'left') {
+            newPosition.x -= borderWidth;
+            if (newPosition.x <= 0) {
+                currentDirection = 'up';
+            }
+        } else if (currentDirection === 'up') {
+            newPosition.y -= borderWidth;
+            if (newPosition.y <= 0) {
+                currentDirection = 'right';
+            }
+        }
+
+        currentPosition = newPosition;
+
+        for (var i = snakeLength - 1; i > 0; i--) {
+            snakeBodies[i].style.left = snakeBodies[i - 1].style.left;
+            snakeBodies[i].style.top = snakeBodies[i - 1].style.top;
+        }
+
+        snakeBodies[0].style.left = currentPosition.x + 'px';
+        snakeBodies[0].style.top = currentPosition.y + 'px';
+    }
+
+    setInterval(moveSnake, 200); // Adjust the interval (in milliseconds) to control the snake's speed
+});
+

@@ -34,7 +34,14 @@
 <!--        <footer>-->
 <!--            <p>&copy; 2024 Timothy Holland. All rights reserved.</p>-->
 <!--        </footer>-->
-
+        </main>
+        <div id="snake">
+            <div class="snake-body"></div>
+            <div class="snake-body"></div>
+            <div class="snake-body"></div>
+            <div class="snake-body"></div>
+            <div class="snake-body"></div>
+        </div>
         <script src="script.js"></script>
     </div>
 </body>
