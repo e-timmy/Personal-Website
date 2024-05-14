@@ -20,7 +20,7 @@
                     <li><a href="#" class="tab" data-section="writing">Writing</a></li>
                     <li><a href="#" class="tab" data-section="projects">Projects</a></li>
                     <li><a href="#" class="tab" data-section="contact">Contact</a></li>
-                    <button id="snakeToggle" class="tab-button">Snake</button>
+<!--                    <button id="snakeToggle" class="tab-button">Snake</button>-->
                 </ul>
             </nav>
         </header>
@@ -33,7 +33,7 @@
             <?php include 'sections/projects.php'; ?>
             <?php include 'sections/contact.php'; ?>
         </main>
-        <?php include 'snake.php'; ?>
+<!--        --><?php //include 'snake.php'; ?>
     <script src="script.js"></script>
     </div>
 </body>

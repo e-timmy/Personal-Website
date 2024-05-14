@@ -6,9 +6,7 @@
 }
 
 :root {
-    --nav-height: 60px; /* Adjust this value based on your navigation menu height */
     --primary-color: #e6ffd6;
-    --secondary-color: #fd7f17;
     --text-color: #3bb31e;
 }
 
@@ -18,7 +16,6 @@ body {
     line-height: 1.6;
     background-color: var(--primary-color);
     color: var(--text-color);
-    height: auto; /* Change from a fixed height to auto */
 }
 
 /* Navigation styles */
@@ -26,7 +23,6 @@ nav {
     background-color: var(--primary-color);
     padding: 1rem;
     position: fixed;
-    font-size: 1.25rem;
     top: 0;
     left: 0;
     right: 0;
@@ -48,47 +44,43 @@ nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.5s ease;
+    font-size: 1.25rem;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color);
-}
-
-/* Section styles */
+/*** Section styles ***/
 .section {
     min-height: 100vh;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top: 80px; /* Adjust this value based on the height of your navigation menu */
-    padding-bottom: 2rem; /* Add padding to create space for the footer */
+    padding-top: 80px;
     color: var(--text-color);
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
 }
 
 .section.active {
-    opacity: 1;
+    display: flex;
+}
+
+.section.active.hidden {
+    opacity: 0; /* Keep opacity at 0 when 'hidden' class is present */
+}
+
+.section.active:not(.hidden) {
+    opacity: 1; /* Set opacity to 1 when 'hidden' class is removed */
 }
 
 .section h1 {
-    justify-content: center;
     font-size: 5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .section h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 4rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .section h3 {
@@ -98,12 +90,7 @@ nav ul li a:hover {
 }
 
 .section h4 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.section p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -114,48 +101,22 @@ nav ul li a:hover {
 }
 
 .tab {
-    position: relative;
-    z-index: 999;
     cursor: pointer;
 }
 
-.tab.inactive {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-.btn {
-    position: relative;
-    z-index: 990;
-    cursor: pointer;
-}
-
-.tab-button {
-    background-color: transparent;
-    border: none;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.25rem;
-    font-family: 'Jersey 10', sans-serif;
-    padding: 0;
-    margin-left: 1rem;
-    cursor: pointer;
-    transition: color 0.5s ease;
-    z-index: 999;
-}
-
-.tab-button:hover {
-    color: var(--secondary-color);
-}
-
-.hero-main-content {
+/*** Home styles ***/
+.home-content {
     text-align: center;
     max-width: 800px;
     padding: 2rem;
 }
 
-/* About styles */
+.home-content h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/*** About styles ***/
 .about-content {
     display: flex;
     align-items: center;
@@ -182,24 +143,3 @@ nav ul li a:hover {
     flex: 2;
     text-align: justify;
 }
-/* Writing styles */
-
-.writing-item {
-    margin-bottom: 2rem;
-}
-
-.writing-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.writing-item p {
-    margin-bottom: 1rem;
-}
-
-
-
-
-
-
-

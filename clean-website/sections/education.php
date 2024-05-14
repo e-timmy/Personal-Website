@@ -2,7 +2,7 @@
     <div class="hero-content">
         <h2>Education</h2>
         <p>For coursework descriptions, specifics, and highlighted projects, see
-            <a href="#" class="tab" data-section="home" >here</a>.</p>
+            <a href="#" class="tab" data-section="coursework" >here</a>.</p>
         <h3>Master of Computer Science | The University of Melbourne </h3>
         <p>Dates: July 2022 - Present</p>
         <p>Weighted-Average-Mark: 84%</p>
@@ -18,18 +18,18 @@
         <p>Dates: January 2021 - December 2021</p>
         <p>Weighted-Average-Mark: 88%</p>
         <p>Coursework: Advanced Research in Politics, Philosophy & GSDS,
-            Humanities Extended Reading Subject</p>
+            Humanities Extended Reading Subject.</p>
         <p>Thesis: Mending Memory - An Essay on Technics and Colonialism. Full copy
             <a href="#writing-thesis" data-section="writing" target="_blank" class="tab">here.</a></p>
         <h3>Exchange Semester | Boston University </h3>
         <p>Dates: July 2017 - December 2017</p>
         <p>GPA: 3.89/4.0</p>
-        <p>Coursework: </p>
+        <p>Coursework: Philosophy of Existence, Econometrics, Computer Security, Operating Systems.</p>
         <h3>Diploma of Informatics | The University of Melbourne</h3>
         <p>Dates: July 2015 - December 2018</p>
         <p>Weighted-Average-Mark: 74.5%</p>
         <p>Coursework: Foundations of Computing, Foundations of Algorithms, Algorithms & Data Structures,
-            Objected-Oriented Software Development, Artificial Intelligence, Software Modelling & Design</p>
+            Objected-Oriented Software Development, Artificial Intelligence, Software Modelling & Design.</p>
         <h3>Bachelor of Arts | The University of Melbourne</h3>
         <p>Dates: January 2014 - December 2018</p>
         <p>Weighted-Average-Mark: 73.5%</p>
