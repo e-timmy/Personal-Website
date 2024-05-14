@@ -48,6 +48,7 @@
         var gameInterval = null;
         var snakeToggle = document.getElementById('snakeToggle');
         var isSnakeVisible = true;
+        var previousDirection = null;
 
         function createFood() {
             food = document.createElement('div');
@@ -81,19 +82,32 @@
             var deltaX = parseInt(food.style.left) - currentPosition.x;
             var deltaY = parseInt(food.style.top) - currentPosition.y;
 
+            var newDirection;
+
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 if (deltaX > 0) {
-                    currentDirection = 'right';
+                    newDirection = 'right';
                 } else {
-                    currentDirection = 'left';
+                    newDirection = 'left';
                 }
             } else {
                 if (deltaY > 0) {
-                    currentDirection = 'down';
+                    newDirection = 'down';
                 } else {
-                    currentDirection = 'up';
+                    newDirection = 'up';
                 }
             }
+
+            // Check if the new direction is not the opposite of the previous direction
+            if (newDirection !== 'right' && previousDirection === 'left' ||
+                newDirection !== 'down' && previousDirection === 'up' ||
+                newDirection !== 'left' && previousDirection === 'right' ||
+                newDirection !== 'up' && previousDirection === 'down') {
+                // If it is, don't update the current direction
+                return;
+            }
+
+            currentDirection = newDirection;
         }
 
         function moveSnake() {

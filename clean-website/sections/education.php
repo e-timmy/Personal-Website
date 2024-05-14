@@ -2,7 +2,7 @@
     <div class="hero-content">
         <h2>Education</h2>
         <p>For coursework descriptions, specifics, and highlighted projects, see
-            <a href="#coursework" class="tab" data-section="coursework" >here</a>.</p>
+            <a href="#" class="tab" data-section="home" >here</a>.</p>
         <h3>Master of Computer Science | The University of Melbourne </h3>
         <p>Dates: July 2022 - Present</p>
         <p>Weighted-Average-Mark: 84%</p>
@@ -34,7 +34,6 @@
         <p>Dates: January 2014 - December 2018</p>
         <p>Weighted-Average-Mark: 73.5%</p>
         <p>Coursework: </p>
-
     </div>
 </section>
 <section id="coursework" class="section">

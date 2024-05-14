@@ -20,7 +20,7 @@
                     <li><a href="#" class="tab" data-section="writing">Writing</a></li>
                     <li><a href="#" class="tab" data-section="projects">Projects</a></li>
                     <li><a href="#" class="tab" data-section="contact">Contact</a></li>
-<!--                    <button id="snakeToggle" class="tab-button">Snake</button> <!-- Toggle to incorporate snake -->
+                    <button id="snakeToggle" class="tab-button">Snake</button>
                 </ul>
             </nav>
         </header>

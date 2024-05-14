@@ -117,7 +117,11 @@ nav ul li a:hover {
     position: relative;
     z-index: 999;
     cursor: pointer;
-    float: left;
+}
+
+.tab.inactive {
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .btn {
@@ -126,36 +130,29 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/*.tab-button {*/
-/*    background-color: transparent;*/
-/*    border: none;*/
-/*    color: var(--text-color);*/
-/*    text-decoration: none;*/
-/*    font-weight: 500;*/
-/*    font-size: 1.25rem;*/
-/*    font-family: 'Jersey 10', sans-serif;*/
-/*    padding: 0;*/
-/*    margin-left: 1rem;*/
-/*    cursor: pointer;*/
-/*    transition: color 0.5s ease;*/
-/*    z-index: 999;*/
-/*}*/
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Jersey 10', sans-serif;
+    padding: 0;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    z-index: 999;
+}
 
-/*.tab-button:hover {*/
-/*    color: var(--secondary-color);*/
-/*}*/
+.tab-button:hover {
+    color: var(--secondary-color);
+}
 
 .hero-main-content {
     text-align: center;
     max-width: 800px;
     padding: 2rem;
-}
-
-/* Footer styles */
-footer {
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--primary-color);
 }
 
 /* About styles */
@@ -198,17 +195,6 @@ footer {
 
 .writing-item p {
     margin-bottom: 1rem;
-}
-
-/* Game demo styles */
-.project-item {
-    margin-bottom: 2rem;
-}
-
-.project-item iframe {
-    width: 100%;
-    height: 400px;
-    border: none;
 }
 
 
