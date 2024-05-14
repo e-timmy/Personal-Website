@@ -1,5 +1,4 @@
 <!-- snake.php -->
-
 <div id="snake">
     <div class="snake-body"></div>
     <div class="snake-body"></div>
@@ -13,7 +12,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: -3;
     }
 
     .snake-body {
@@ -25,12 +24,13 @@
         left: 0;
         opacity: 0.8;
         border-radius: 50%;
+        z-index: -3;
     }
 
     .food {
         background-color: #ffb4b4;
         opacity: 0.8;
-        z-index: -1;
+        z-index: -3;
     }
 </style>
 

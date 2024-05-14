@@ -2,7 +2,7 @@
     <div class="hero-content">
         <h2>Education</h2>
         <p>For coursework descriptions, specifics, and highlighted projects, see
-            <a href="#coursework" data-section="coursework" target="_blank" class="tab">here</a>.</p>
+            <a href="#coursework" class="tab" data-section="coursework" >here</a>.</p>
         <h3>Master of Computer Science | The University of Melbourne </h3>
         <p>Dates: July 2022 - Present</p>
         <p>Weighted-Average-Mark: 84%</p>
@@ -21,6 +21,10 @@
             Humanities Extended Reading Subject</p>
         <p>Thesis: Mending Memory - An Essay on Technics and Colonialism. Full copy
             <a href="#writing-thesis" data-section="writing" target="_blank" class="tab">here.</a></p>
+        <h3>Exchange Semester | Boston University </h3>
+        <p>Dates: July 2017 - December 2017</p>
+        <p>GPA: 3.89/4.0</p>
+        <p>Coursework: </p>
         <h3>Diploma of Informatics | The University of Melbourne</h3>
         <p>Dates: July 2015 - December 2018</p>
         <p>Weighted-Average-Mark: 74.5%</p>
@@ -30,10 +34,7 @@
         <p>Dates: January 2014 - December 2018</p>
         <p>Weighted-Average-Mark: 73.5%</p>
         <p>Coursework: </p>
-        <h3>Exchange Semester | Boston University </h3>
-        <p>Dates: July 2017 - December 2017</p>
-        <p>GPA: 3.91/4.0</p>
-        <p>Coursework: </p>
+
     </div>
 </section>
 <section id="coursework" class="section">

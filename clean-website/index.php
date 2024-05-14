@@ -14,13 +14,13 @@
         <header>
             <nav id="navbar">
                 <ul>
-                    <li><a href="#" class="tab active" data-section="home">Home</a></li>
+                    <li><a href="#" class="tab" data-section="home">Home</a></li>
                     <li><a href="#" class="tab" data-section="about">About</a></li>
                     <li><a href="#" class="tab" data-section="education">Education</a></li>
                     <li><a href="#" class="tab" data-section="writing">Writing</a></li>
                     <li><a href="#" class="tab" data-section="projects">Projects</a></li>
                     <li><a href="#" class="tab" data-section="contact">Contact</a></li>
-                    <!--<button id="snakeToggle" class="tab-button">Snake</button> <!-- Toggle to incorporate snake -->
+<!--                    <button id="snakeToggle" class="tab-button">Snake</button> <!-- Toggle to incorporate snake -->
                 </ul>
             </nav>
         </header>

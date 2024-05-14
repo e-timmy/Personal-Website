@@ -16,7 +16,7 @@
                 cosmology, I propose a pluralism of technics embedded in an affirmation of the land. Within
                 this pluralism, I advance a novel technic of my own, making-anarchic: the making of the
                 unmaking of time.</p>
-            <p>Read in full <a href="documents/thesis.pdf" target="_blank" class="btn">here</a></p>
+            <p>Read in full <a href="../documents/thesis.pdf" target="_blank" class="btn">here</a></p>
         </div>
         <div class="writing-item">
             <h3>Article 1</h3>
