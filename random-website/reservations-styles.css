@@ -1,0 +1,239 @@
+.reservation-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #e41e31;
+    border-radius: 10px;
+}
+
+.reservation-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px 40px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background-color: #e41e31;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.reservation-step {
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.reservation-step.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floor Plan Styles */
+.floor-plan {
+    padding: 20px;
+}
+
+.floor-plan-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.legend {
+    display: flex;
+    gap: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.color-box.available {
+    background-color: #4CAF50;
+}
+
+.color-box.occupied {
+    background-color: #f44336;
+}
+
+.color-box.selected {
+    background-color: #2196F3;
+}
+
+.restaurant-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.bar-area {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.bar-seats {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.main-area {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.window-seats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.dining-tables {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Table Styles */
+.table {
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.table:hover {
+    transform: scale(1.05);
+}
+
+.table.available {
+    background-color: rgba(76, 175, 80, 0.2);
+    border-color: #4CAF50;
+}
+
+.table.occupied {
+    background-color: rgba(244, 67, 54, 0.2);
+    border-color: #f44336;
+    cursor: not-allowed;
+}
+
+.table.selected {
+    background-color: rgba(33, 150, 243, 0.2);
+    border-color: #2196F3;
+}
+
+.bar-seat {
+    width: 60px;
+    height: 40px;
+}
+
+.window-table {
+    width: 100%;
+    height: 80px;
+}
+
+.dining-table {
+    height: 100px;
+}
+
+.table-6 {
+    grid-column: span 2;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.next-step,
+.confirm-reservation {
+    background-color: #e41e31;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.next-step:hover,
+.confirm-reservation:hover {
+    background-color: #c41929;
+}
+
+.next-step:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Confirmation Styles */
+.confirmation-details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-summary {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.reservation-summary p {
+    margin: 10px 0;
+}

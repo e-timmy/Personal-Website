@@ -1,0 +1,171 @@
+.background-animations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.coffee-animation {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 200px;
+    height: 300px;
+}
+
+.pancake-animation {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 300px;
+    height: 200px;
+}
+
+/* Coffee Animation Styles */
+.coffee-pour {
+    width: 100%;
+    height: 100%;
+}
+
+.pour-stream {
+    stroke-dasharray: 6;
+    animation: pour 2s linear infinite;
+}
+
+@keyframes pour {
+    to {
+        stroke-dashoffset: 12;
+    }
+}
+
+.coffee-liquid {
+    animation: fill 3s ease-out forwards;
+    transform-origin: center bottom;
+}
+
+@keyframes fill {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.ripple {
+    animation: ripple 2s linear infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.ripple-1 { --delay: 0s; }
+.ripple-2 { --delay: 0.5s; }
+.ripple-3 { --delay: 1s; }
+
+@keyframes ripple {
+    0% {
+        r: 0;
+        opacity: 1;
+    }
+    100% {
+        r: 20;
+        opacity: 0;
+    }
+}
+
+.steam, .p-steam {
+    animation: steam 3s ease-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.steam-1, .p-steam-1 { --delay: 0s; }
+.steam-2, .p-steam-2 { --delay: 0.5s; }
+.steam-3, .p-steam-3 { --delay: 1s; }
+
+@keyframes steam {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+    }
+    20% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.2;
+        transform: translateY(-20px) scaleX(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scaleX(1.5);
+    }
+}
+
+/* Pancake Animation Styles */
+.pancakes {
+    width: 100%;
+    height: 100%;
+}
+
+.pancake-stack {
+    animation: stack-bounce 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes stack-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.butter {
+    animation: butter-melt 4s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes butter-melt {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .coffee-animation {
+        width: 150px;
+        height: 225px;
+        top: 5%;
+        left: 5%;
+    }
+
+    .pancake-animation {
+        width: 200px;
+        height: 133px;
+        top: 15%;
+        right: 5%;
+    }
+}
+
+/* Add some depth to the animations */
+.coffee-pour, .pancakes {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Ensure animations don't interfere with content */
+.container {
+    position: relative;
+    z-index: 1;
+}

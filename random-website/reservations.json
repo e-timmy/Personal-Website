@@ -1,0 +1,30 @@
+{
+  "tables": {
+    "bar1": { "type": "bar", "seats": 2, "label": "Bar 1" },
+    "bar2": { "type": "bar", "seats": 2, "label": "Bar 2" },
+    "bar3": { "type": "bar", "seats": 2, "label": "Bar 3" },
+    "bar4": { "type": "bar", "seats": 2, "label": "Bar 4" },
+    "window1": { "type": "window", "seats": 4, "label": "Window 1" },
+    "window2": { "type": "window", "seats": 4, "label": "Window 2" },
+    "window3": { "type": "window", "seats": 4, "label": "Window 3" },
+    "table1": { "type": "regular", "seats": 4, "label": "Table 1" },
+    "table2": { "type": "regular", "seats": 4, "label": "Table 2" },
+    "table3": { "type": "regular", "seats": 4, "label": "Table 3" },
+    "table4": { "type": "regular", "seats": 6, "label": "Table 4" },
+    "table5": { "type": "regular", "seats": 6, "label": "Table 5" }
+  },
+  "reservations": {
+    "2024-02-20": {
+      "bar1": ["17:00", "17:30", "18:00"],
+      "window1": ["19:00", "19:30"],
+      "table3": ["18:00", "18:30", "19:00"],
+      "table4": ["20:00", "20:30"]
+    },
+    "2024-02-21": {
+      "bar2": ["18:00", "18:30"],
+      "window2": ["19:00", "19:30", "20:00"],
+      "table1": ["17:30", "18:00"],
+      "table5": ["19:00", "19:30", "20:00"]
+    }
+  }
+}
